@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/7f92ba4718.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Instagram Photo Feed con Bootstrap</title>
+</head>
+<body class="body bg-white">
+    <div class="container-fluid m-auto p-3">
+      <div class="row d-flex justify-content-center">
+        <nav class="navbar bg-body-secondary">
+    
+            <div class="container-fluid ">      
+                <span class="navbar-brand mb-0 h1"><i class="fa-brands fa-instagram"></i>  Instagram</span>
+              <div class="">
+
+                <button type="button" class="btn btn-success focus-ring focus-ring-secondary me-28" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Create a new post
+                </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                  
+                                      <label for="exampleFormControlTextarea1" class="form-label">Caption</label>
+                                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="2">Add the caption of your post here</textarea>
+                                      <button type="button" class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+                                      <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                    <button type="button" class="btn btn-Secondary dropdown-toggle focus-ring focus-ring-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end ">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                      <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+              </div>
+            </div>
+
+        </nav>
+      
+        <ul class="nav nav-pills mb-3 mt-4 justify-content-center" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="bi bi-grid-3x3-gap-fill"></i></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="bi bi-square-fill"></i></button>
+          </li>
+        </ul>
+
+
+        <div class="tab-content m-auto d-flex justify-content-center" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+            <div class="card-group">
+              <div class="card m-2" style="width: 18rem;">
+                <img src="https://picsum.photos/400?random=1" class="card-img-top" alt="...">
+              </div>
+              <div class="card m-2" style="width: 18rem;">
+                <img src="https://picsum.photos/400?random=2" class="card-img-top" alt="...">
+              </div>
+              <div class="card m-2" style="width: 18rem;">
+                <img src="https://picsum.photos/400?random=3" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="card-group">
+              <div class="card m-2" style="width: 18rem;">
+                <img src="https://picsum.photos/400?random=4" class="card-img-top" alt="...">
+              </div>
+              <div class="card m-2" style="width: 18rem;">
+                <img src="https://picsum.photos/400?random=5" class="card-img-top" alt="...">
+              </div>
+              <div class="card m-2" style="width: 18rem;">
+                <img src="https://picsum.photos/400?random=6" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="card-group">
+              <div class="card m-2" style="width: 18rem;">
+                <img src="https://picsum.photos/400?random=7" class="card-img-top" alt="...">
+              </div>
+              <div class="card m-2" style="width: 18rem;">
+                <img src="https://picsum.photos/400?random=8" class="card-img-top" alt="...">
+              </div>
+              <div class="card m-2" style="width: 18rem;">
+                <img src="https://picsum.photos/400?random=9" class="card-img-top" alt="...">
+              </div>
+            </div>
+          </div>
+
+          <div class="row tab-pane fade m-auto " id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+            <div class="card my-4 mx-auto col-12 col-sm-4 ">
+              <div class="card-header d-flex justify-content-between bg-white">
+                <p><b>Img Aleatoria</b></p>
+              </div>
+              <img src="https://picsum.photos/400?random=10" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">
+                  <strong> 204 likes</strong>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt cum consectetur, commodi odit corporis laborum at, vitae beatae exercitationem velit omnis facilis neque nobis culpa temporibus ducimus quidem excepturi.</p>
+                </p>
+              </div>
+            </div>
+            <div class="card my-4 mx-auto col-12 col-sm-4">
+              <div class="card-header d-flex justify-content-between bg-white">
+                <p><b>Img Aleatoria</b></p>
+              </div>
+              <img src="https://picsum.photos/400?random=11" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">
+                  <strong> 204 likes</strong>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt cum consectetur, commodi odit corporis laborum at, vitae beatae exercitationem velit omnis facilis neque nobis culpa temporibus ducimus quidem excepturi.</p>
+                </p>
+              </div>
+            </div>
+            <div class="card my-4 mx-auto col-12 col-sm-4 " >
+              <div class="card-header d-flex justify-content-between bg-white">
+                <p><b>Img Aleatoria</b></p>
+              </div>
+              <img src="https://picsum.photos/400?random=12" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">
+                  <strong> 204 likes</strong>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt cum consectetur, commodi odit corporis laborum at, vitae beatae exercitationem velit omnis facilis neque nobis culpa temporibus ducimus quidem excepturi.</p>
+                </p>
+              </div>
+            </div>
+            <div class="card my-4 mx-auto col-12 col-sm-4 ">
+              <div class="card-header d-flex justify-content-between bg-white">
+                <p><b>Img Aleatoria</b></p>
+              </div>
+              <img src="https://picsum.photos/400?random=13" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">
+                  <strong> 204 likes</strong>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt cum consectetur, commodi odit corporis laborum at, vitae beatae exercitationem velit omnis facilis neque nobis culpa temporibus ducimus quidem excepturi.</p>
+                </p>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
